@@ -71,12 +71,12 @@ public class Main {
 //        System.out.println("Sum of numbers = " + sumOfNumbers + " , Multiplication = " + multiplicationOfNumbers);
 //
 //        System.out.println();
-        System.out.println("task 6.1: Ввести с консоли n целых чисел. На консоль вывести: четные и нечетные числа.");
-
         int numberOfNumbers = 5;
+        System.out.println("task 6.1: Ввести с консоли " + numberOfNumbers + " целых чисел. На консоль вывести: четные и нечетные числа.");
+
 
         scanner = new Scanner(System.in);
-        System.out.println("Input " + numberOfNumbers + " numbers with spaces: ");
+//        System.out.println("Input " + numberOfNumbers + " numbers with spaces: ");
         String enteredNumbersString = scanner.nextLine();
 
         String enteredNumbersStringArray[] = enteredNumbersString.trim().split("\\s+");
@@ -105,7 +105,7 @@ public class Main {
 
         }
         System.out.println();
-        System.out.println("task 6.2: Ввести с консоли n целых чисел. На консоль вывести: Наибольшее и наименьшее число.");
+        System.out.println("task 6.2: На консоль вывести: Наибольшее и наименьшее число.");
 
         int maxNumber = enteredNumbersIntegerArray[1], minNumber = enteredNumbersIntegerArray[1];
 
@@ -120,8 +120,40 @@ public class Main {
 
 
         }
-        System.out.println("Наибольшее число: " +maxNumber + " Наименьшее число: " + minNumber);
+        System.out.println("Наибольшее число: " + maxNumber + " Наименьшее число: " + minNumber);
 
+        System.out.println();
+        System.out.println("task 6.3: На консоль вывести: Числа, которые делятся на 3 или на 9.");
 
+        boolean flag=false;
+        for (int n : enteredNumbersIntegerArray
+        ) {
+            if ((n % 3 == 0) || (n % 9 == 0)) {
+                System.out.print(n + " ");
+                flag=true;
+            }
+
+        }
+        if (!flag) System.out.print("таких чисел нет");
+
+        System.out.println();
+        System.out.println("task 6.4: На консоль вывести: Числа, которые делятся на 5 и на 7.");
+
+        flag=false;
+        for (int n : enteredNumbersIntegerArray
+        ) {
+            if ((n % 5 == 0) && (n % 7 == 0)) {
+                System.out.print(n + " ");
+                flag=true;
+            }
+
+        }
+        if (!flag) System.out.print("таких чисел нет");
+
+        System.out.println();
+        System.out.println("task 6.5: На консоль вывести: Все трехзначные числа, в десятичной записи которых нет одинаковых\n" +
+                "цифр.\n");
+
+        
     }
 }
