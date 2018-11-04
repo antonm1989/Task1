@@ -156,11 +156,11 @@ public class Main {
 
 
         int amountOfDigits = 3;
-        boolean flagDifferentDigits=false;
-        String resultNumbers="";
+        boolean flagDifferentDigits = false;
+        String resultNumbers = "";
 
         for (String s : enteredNumbersStringArray) {
-            flagDifferentDigits = false;
+            flagDifferentDigits = true;
             if (s.length() == amountOfDigits) {
 
 
@@ -172,26 +172,24 @@ public class Main {
                 }
 
                 for (int i = 0; i < s.length() - 1; i++) {
-                    if (bytes[i] != bytes[i + 1]) {
-                        flagDifferentDigits = true;
-                        continue;
-                    } else {
-                        flagDifferentDigits = false;
-                        break;
+                    for (int j = i+1; j < s.length(); j++) {
+
+                        if (bytes[i] == bytes[j]) {
+                            flagDifferentDigits = false;
+                            //break;
+                        }
                     }
+                }
+                if (flagDifferentDigits == true) {
+                    resultNumbers = resultNumbers + s + " ";
                 }
 
             }
-            if (flagDifferentDigits == true) {
-                resultNumbers=resultNumbers+s+" ";
-                //System.out.print(s+" ");
-            }
-
         }
-        if (resultNumbers.length()==0) {
+        if (resultNumbers.length() == 0) {
             System.out.println("таких чисел нет");
-        }
-        else System.out.println(resultNumbers);
+        } else System.out.println(resultNumbers);
+
 
     }
 }
