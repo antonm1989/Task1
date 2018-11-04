@@ -125,12 +125,12 @@ public class Main {
         System.out.println();
         System.out.println("task 6.3: На консоль вывести: Числа, которые делятся на 3 или на 9.");
 
-        boolean flag=false;
+        boolean flag = false;
         for (int n : enteredNumbersIntegerArray
         ) {
             if ((n % 3 == 0) || (n % 9 == 0)) {
                 System.out.print(n + " ");
-                flag=true;
+                flag = true;
             }
 
         }
@@ -139,12 +139,12 @@ public class Main {
         System.out.println();
         System.out.println("task 6.4: На консоль вывести: Числа, которые делятся на 5 и на 7.");
 
-        flag=false;
+        flag = false;
         for (int n : enteredNumbersIntegerArray
         ) {
             if ((n % 5 == 0) && (n % 7 == 0)) {
                 System.out.print(n + " ");
-                flag=true;
+                flag = true;
             }
 
         }
@@ -154,6 +154,44 @@ public class Main {
         System.out.println("task 6.5: На консоль вывести: Все трехзначные числа, в десятичной записи которых нет одинаковых\n" +
                 "цифр.\n");
 
+
+        int amountOfDigits = 3;
+        boolean flagDifferentDigits=false;
+        String resultNumbers="";
+
+        for (String s : enteredNumbersStringArray) {
+            flagDifferentDigits = false;
+            if (s.length() == amountOfDigits) {
+
+
+                byte bytes[] = new byte[s.length()];
+
+                for (int i = 0; i < s.length(); i++) {
+
+                    bytes[i] = s.getBytes()[i];
+                }
+
+                for (int i = 0; i < s.length() - 1; i++) {
+                    if (bytes[i] != bytes[i + 1]) {
+                        flagDifferentDigits = true;
+                        continue;
+                    } else {
+                        flagDifferentDigits = false;
+                        break;
+                    }
+                }
+
+            }
+            if (flagDifferentDigits == true) {
+                resultNumbers=resultNumbers+s+" ";
+                //System.out.print(s+" ");
+            }
+
+        }
+        if (resultNumbers.length()==0) {
+            System.out.println("таких чисел нет");
+        }
+        else System.out.println(resultNumbers);
 
     }
 }
