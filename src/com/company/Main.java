@@ -7,76 +7,75 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        System.out.println("task 1: Приветствовать любого пользователя при вводе его имени через командную строку.");
-//
+        System.out.println("task 1. Приветствовать любого пользователя при вводе его имени через командную строку.");
+
         Scanner scanner = new Scanner(System.in);
-//        String userName = scanner.nextLine();
-//        System.out.println("Hello " + userName + "!");
-//
-//
-//        System.out.println();
-//        System.out.println("task 2: Отобразить в окне консоли аргументы командной строки в обратном порядке.");
-//
-//        for (int i = args.length - 1; i >= 0; i--) {
-//            System.out.print(args[i] + " ");
-//        }
-//
-//        for (String arg : args) {
-//            System.out.print(String.valueOf(arg) + " ");
-//        }
-//
-//        System.out.println();
-//        System.out.println("task 3: Вывести заданное количество случайных чисел с переходом и без перехода на новую строку.");
-//
-//        int amountOfNumbers = 10;
-//        int randomNumber;
-//
-//        for (int i = 0; i < amountOfNumbers; i++) {
-//            randomNumber = (int) (Math.random() * 3);
-//            System.out.println(randomNumber);
-//        }
-//
-//        for (int i = 0; i < amountOfNumbers; i++) {
-//            randomNumber = (int) (Math.random() * 3);
-//            System.out.print(randomNumber + " ");
-//        }
-//
-//        System.out.println();
-//        System.out.println();
-//        System.out.println("task 4: Ввести пароль из командной строки и сравнить его со строкой-образцом.");
-//
-//        String correctPassword = "qwerty";
-//        Scanner scannerPassword = new Scanner(System.in);
-//        String enteredPassword = scannerPassword.nextLine();
-//
-//        if (correctPassword.equals(enteredPassword)) {
-//            System.out.println("The password is correct");
-//        } else System.out.println("The password is NOT correct");
-//
-//        System.out.println();
-//        System.out.println("task 5: Ввести целые числа как аргументы командной строки, подсчитать их суммы " +
-//                "(произведения) и вывести результат на консоль.");
-//
-//        Scanner scannerArguments = new Scanner(System.in);
-//        String enteredArguments = scannerArguments.nextLine();
-//
-//        int sumOfNumbers = 0;
-//        int multiplicationOfNumbers = 1;
-//
-//        for (String s : enteredArguments.trim().split("\\s+")) {
-//            System.out.println("s = " + s);
-//            sumOfNumbers += Integer.parseInt(s);
-//            multiplicationOfNumbers *= Integer.parseInt(s);
-//        }
-//        System.out.println("Sum of numbers = " + sumOfNumbers + " , Multiplication = " + multiplicationOfNumbers);
-//
-//        System.out.println();
+        String userName = scanner.nextLine();
+        System.out.println("Hello " + userName + "!");
+
+
+        System.out.println();
+        System.out.println("task 2. Отобразить в окне консоли аргументы командной строки в обратном порядке.");
+
+        for (int i = args.length - 1; i >= 0; i--) {
+            System.out.print(args[i] + " ");
+        }
+
+        for (String arg : args) {
+            System.out.print(String.valueOf(arg) + " ");
+        }
+
+        System.out.println();
+        System.out.println("task 3. Вывести заданное количество случайных чисел с переходом и без перехода на новую строку.");
+
+        int amountOfNumbers = 10;
+        int randomNumber;
+
+        for (int i = 0; i < amountOfNumbers; i++) {
+            randomNumber = (int) (Math.random() * 3);
+            System.out.println(randomNumber);
+        }
+
+        for (int i = 0; i < amountOfNumbers; i++) {
+            randomNumber = (int) (Math.random() * 3);
+            System.out.print(randomNumber + " ");
+        }
+
+        System.out.println();
+        System.out.println();
+        System.out.println("task 4. Ввести пароль из командной строки и сравнить его со строкой-образцом (qwerty).");
+
+        String correctPassword = "qwerty";
+        Scanner scannerPassword = new Scanner(System.in);
+        String enteredPassword = scannerPassword.nextLine();
+
+        if (correctPassword.equals(enteredPassword)) {
+            System.out.println("The password is correct");
+        } else System.out.println("The password is NOT correct");
+
+        System.out.println();
+        System.out.println("task 5. Ввести целые числа как аргументы командной строки, подсчитать их суммы " +
+                "(произведения) и вывести результат на консоль.");
+
+        Scanner scannerArguments = new Scanner(System.in);
+        String enteredArguments = scannerArguments.nextLine();
+
+        int sumOfNumbers = 0;
+        int multiplicationOfNumbers = 1;
+
+        for (String s : enteredArguments.trim().split("\\s+")) {
+            System.out.println("s = " + s);
+            sumOfNumbers += Integer.parseInt(s);
+            multiplicationOfNumbers *= Integer.parseInt(s);
+        }
+        System.out.println("Sum of numbers = " + sumOfNumbers + " , Multiplication = " + multiplicationOfNumbers);
+
+        System.out.println();
         int numberOfNumbers = 5;
-        System.out.println("task 6.1: Ввести с консоли " + numberOfNumbers + " целых чисел. На консоль вывести: четные и нечетные числа.");
+        System.out.println("task 6.1. Ввести с консоли " + numberOfNumbers + " целых чисел (1-, 2-, 3- и 4-х значные). На консоль вывести: четные и нечетные числа.");
 
 
         scanner = new Scanner(System.in);
-//        System.out.println("Input " + numberOfNumbers + " numbers with spaces: ");
         String enteredNumbersString = scanner.nextLine();
 
         String enteredNumbersStringArray[] = enteredNumbersString.trim().split("\\s+");
@@ -84,7 +83,6 @@ public class Main {
 
         for (int i = 0; i < enteredNumbersStringArray.length; i++) {
             enteredNumbersIntegerArray[i] = Integer.parseInt(enteredNumbersStringArray[i]);
-            //System.out.print(enteredNumbersIntegerArray[i] + " ");
         }
 
         System.out.print("Четные числа: ");
@@ -105,7 +103,10 @@ public class Main {
 
         }
         System.out.println();
-        System.out.println("task 6.2: На консоль вывести: Наибольшее и наименьшее число.");
+        System.out.println();
+        System.out.println();
+        System.out.println("task 6.2. На консоль вывести: Наибольшее и наименьшее число.");
+
 
         int maxNumber = enteredNumbersIntegerArray[1], minNumber = enteredNumbersIntegerArray[1];
 
@@ -123,7 +124,8 @@ public class Main {
         System.out.println("Наибольшее число: " + maxNumber + " Наименьшее число: " + minNumber);
 
         System.out.println();
-        System.out.println("task 6.3: На консоль вывести: Числа, которые делятся на 3 или на 9.");
+        System.out.println();
+        System.out.println("task 6.3. На консоль вывести: Числа, которые делятся на 3 или на 9.");
 
         boolean flag = false;
         for (int n : enteredNumbersIntegerArray
@@ -137,7 +139,9 @@ public class Main {
         if (!flag) System.out.print("таких чисел нет");
 
         System.out.println();
-        System.out.println("task 6.4: На консоль вывести: Числа, которые делятся на 5 и на 7.");
+        System.out.println();
+        System.out.println();
+        System.out.println("task 6.4. На консоль вывести: Числа, которые делятся на 5 и на 7.");
 
         flag = false;
         for (int n : enteredNumbersIntegerArray
@@ -151,7 +155,9 @@ public class Main {
         if (!flag) System.out.print("таких чисел нет");
 
         System.out.println();
-        System.out.println("task 6.5: На консоль вывести: Все трехзначные числа, в десятичной записи которых нет одинаковых\n" +
+        System.out.println();
+        System.out.println();
+        System.out.println("task 6.5. На консоль вывести: Все трехзначные числа, в десятичной записи которых нет одинаковых\n" +
                 "цифр.\n");
 
 
@@ -172,11 +178,10 @@ public class Main {
                 }
 
                 for (int i = 0; i < s.length() - 1; i++) {
-                    for (int j = i+1; j < s.length(); j++) {
+                    for (int j = i + 1; j < s.length(); j++) {
 
                         if (bytes[i] == bytes[j]) {
                             flagDifferentDigits = false;
-                            //break;
                         }
                     }
                 }
@@ -190,6 +195,38 @@ public class Main {
             System.out.println("таких чисел нет");
         } else System.out.println(resultNumbers);
 
+
+        System.out.println();
+        System.out.println();
+        System.out.println("task 6.6. На консоль вывести: «Счастливые» числа");
+
+        int mediana = 0;
+        resultNumbers = "";
+        boolean isFourDigits = false;
+
+        for (String s : enteredNumbersStringArray) {
+
+            if (s.length() == 4) {
+                isFourDigits = true;
+                mediana = s.length() / 2;
+
+                String leftPart = s.substring(0, mediana);
+                String rightPart = s.substring(mediana);
+
+                if (((Integer.parseInt("" + (char) (leftPart.getBytes()[0])))
+                        + (Integer.parseInt("" + (char) (leftPart.getBytes()[1]))))
+                        == ((Integer.parseInt("" + (char) (rightPart.getBytes()[0])))
+                        + (Integer.parseInt("" + (char) (rightPart.getBytes()[1]))))) {
+
+                    resultNumbers = resultNumbers + s + " ";
+                }
+            }
+        }
+
+        if (isFourDigits == false) System.out.println("невалидные числа для такой проверки, требуются 4-значные");
+        if (resultNumbers.length() == 0) {
+            System.out.println("нет таких чисел");
+        } else System.out.println(resultNumbers);
 
     }
 }
