@@ -224,9 +224,10 @@ public class Main {
         }
 
         if (isFourDigits == false) System.out.println("невалидные числа для такой проверки, требуются 4-значные");
-        if (resultNumbers.length() == 0) {
+        if ((resultNumbers.length() == 0) && (isFourDigits == true)) {
             System.out.println("нет таких чисел");
-        } else System.out.println(resultNumbers);
+        }
+        if ((resultNumbers.length() != 0) && (isFourDigits == true)) System.out.println(resultNumbers);
 
     }
 }
